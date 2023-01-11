@@ -5,12 +5,12 @@ RUN sudo dnf -y update &&\
     sudo dnf install -y git ffmpeg ImageMagick nodejs yarnpkg libwebp &&\
     sudo dnf clean all -y
 
-RUN git clone https://github.com/
+RUN git clone https://github.com/Gamadios/GamaBot-MD-
 
-WORKDIR /root/GamqBot-MD
+WORKDIR /root/GamaBot-MD
 
 COPY ./root/GamaBot-MD
-
+-
 RUN yarn install
 
 CMD ["node", "index.js"]
